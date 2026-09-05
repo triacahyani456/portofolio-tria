@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Tria Cahyani - Duta Aksi Sosial & Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        #splashScreen {
+            background: rgba(15, 23, 42, 0.45) !important;
+            backdrop-filter: blur(16px) !important;
+            -webkit-backdrop-filter: blur(16px) !important;
+            transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.6s ease !important;
+            overflow: hidden;
+        }
+        #splashScreen.slide-up {
+            transform: translateY(-100%);
+            opacity: 0;
+            pointer-events: none;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .moving-text {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 14s linear infinite;
+        }
+
+        /* NAVBAR TRANSPARAN TEMBUS PANDANG SAAT DI-SCROLL */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            background: transparent !important;
+        }
+        
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.15) !important;
+            backdrop-filter: blur(8px) !important;
+            -webkit-backdrop-filter: blur(8px) !important;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        body.dark-mode header.scrolled {
+            background: rgba(15, 23, 42, 0.25) !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* SOSIAL MEDIA ICONS STYLING */
+        .social-icons-footer {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-bottom: 15px;
+        }
+        .social-icons-footer a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: rgba(212, 175, 55, 0.1);
+            color: #d4af37;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            text-decoration: none;
+        }
+        .social-icons-footer a:hover {
+            background: #d4af37;
+            color: #0f172a;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(212, 175, 55, 0.35);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="splashScreen" style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: var(--bg-color, #0f172a); z-index: 99999; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px;">
+        
+        <div style="position: absolute; top: 25px; width: 100%; overflow: hidden; opacity: 0.25; font-size: 11px; letter-spacing: 4px; color: #ffffff; font-family: 'Cinzel', serif; pointer-events: none;">
+            <div class="moving-text">UI/UX DESIGNER &bull; DEVELOPER &bull; CREATIVE CONTENT CREATOR &bull; DUTA AKSI SOSIAL &bull; DIGITAL ARTIST</div>
+        </div>
+        <div style="position: absolute; bottom: 25px; width: 100%; overflow: hidden; opacity: 0.25; font-size: 11px; letter-spacing: 4px; color: #ffffff; font-family: 'Cinzel', serif; pointer-events: none;">
+            <div class="moving-text" style="animation-direction: reverse;">WELCOME TO MY CREATIVE UNIVERSE &bull; PORTFOLIO 2026 &bull; TRIA CAHYANI</div>
+        </div>
+
+        <div style="position: absolute; width: 300px; height: 300px; background: radial-gradient(circle, rgba(212,175,55,0.12) 0%, rgba(0,0,0,0) 70%); border-radius: 50%; z-index: 1; pointer-events: none;"></div>
+
+        <div style="position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; max-width: 400px; width: 100%;">
+            
+            <div style="position: relative; width: 120px; height: 120px; border-radius: 50%; padding: 4px; background: linear-gradient(135deg, #d4af37, rgba(255,255,255,0.1)); margin-bottom: 22px; box-shadow: 0 15px 35px rgba(0,0,0,0.3);">
+                <div style="width: 100%; height: 100%; border-radius: 50%; overflow: hidden; background: #1e293b;">
+                    <img src="triaa.jpeg" alt="Tria Cahyani" style="width: 100%; height: 100%; object-fit: cover; object-position: top center;">
+                </div>
+            </div>
+
+            <h2 style="font-size: 22px; letter-spacing: 2px; margin-bottom: 6px; color: #ffffff; font-family: 'Cinzel', serif; font-weight: 700;">TRIA CAHYANI</h2>
+            <div style="width: 40px; height: 2px; background: #d4af37; margin-bottom: 12px;"></div>
+            <p style="color: #94a3b8; margin-bottom: 30px; font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase;">UI/UX Designer & Developer</p>
+            
+            <button onclick="enterPortfolio()" style="width: 100%; max-width: 220px; padding: 12px 0; background: #d4af37; color: #0f172a; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 13px; letter-spacing: 1.5px; box-shadow: 0 6px 20px rgba(212, 175, 55, 0.25); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 25px rgba(212, 175, 55, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(212, 175, 55, 0.25)';">
+                MASUK PORTFOLIO
+            </button>
+        </div>
+    </div>
+
+    <button id="backToTop" onclick="scrollToTop()" title="Kembali ke atas">&uarr;</button>
+
+    <div class="dynamic-bg-glow glow-1"></div>
+    <div class="dynamic-bg-glow glow-2"></div>
+
+    <header>
+        <div class="logo" style="font-family: 'Cinzel', serif; letter-spacing: 1px;">TRIA CAHYANI<span>.</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#skills">Keahlian</a></li>
+                <li><a href="#experience">Prestasi</a></li>
+                <li><a href="#achievements">Sertifikat</a></li>
+                <li><a href="#projects">Karya</a></li>
+                <li><a href="#contact" class="btn-nav">Kontak</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+                <span class="theme-icon">🌙</span>
+            </button>
+            <button id="langToggle" class="theme-toggle-btn" aria-label="Toggle Language" style="margin-left: 8px; font-weight: bold; font-size: 14px;">
+                <span id="langText">ID</span>
+            </button>
+            <button id="menuToggle" class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content reveal-on-scroll">
+            <span class="badge">Selamat Datang</span>
+            <h1>Halo, Saya <span class="highlight" id="typingText">Tria Cahyani</span></h1>
+            <p class="subtitle">UI/UX Designer • Visual & Brand Communicator • Creative Content Creator • Vocalist & Digital Artist</p>
+            <p class="description">
+                Berfokus pada perancangan pengalaman antarmuka digital yang intuitif dan estetis, didukung oleh keahlian komunikasi strategis serta kecintaan mendalam pada seni visual dan vokal.
+            </p>
+            <div class="hero-btns" style="margin-top: 24px;">
+                <a href="#projects" class="btn btn-primary">Lihat Karya</a>
+                <a href="#contact" class="btn btn-secondary">Hubungi Saya</a>
+            </div>
+        </div>
+
+        <div class="hero-image reveal-on-scroll">
+            <div class="chibi-glow-bg"></div>
+            <div class="chibi-bubble" id="chibiBubble">Klik aku!</div>
+            <div class="chibi-container" id="cursorCharacter">
+                <div class="chibi-body-wrap">
+                    <div class="chibi-braid left"></div>
+                    <div class="chibi-braid right"></div>
+                    <div class="chibi-hair-back"></div>
+                    <div class="chibi-head">
+                        <div class="chibi-blush left"></div>
+                        <div class="chibi-blush right"></div>
+                        <div class="chibi-bangs"></div>
+                        <div class="chibi-accessory">⭐</div>
+                        <div class="chibi-eyes">
+                            <div class="eye"><div class="pupil"><div class="shine-1"></div><div class="shine-2"></div></div></div>
+                            <div class="eye"><div class="pupil"><div class="shine-1"></div><div class="shine-2"></div></div></div>
+                        </div>
+                        <div class="chibi-mouth"></div>
+                    </div>
+                    <div class="chibi-torso">
+                        <div class="chibi-ribbon"></div>
+                        <div class="chibi-collar"></div>
+                    </div>
+                    <div class="chibi-arms"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="reveal-on-scroll">
+            <h2 class="section-title">Tentang Saya</h2>
+            <div class="about-card">
+                <p class="about-lead">
+                    Halo! Saya <strong>Tria Cahyani</strong>,
+                </p>
+                <p class="about-text">
+                     Perpaduan antara estetika visual dan strategi komunikasi adalah fondasi dari setiap karya yang saya ciptakan. Sebagai seorang UI/UX Designer, saya senang mengeksplorasi tata letak, warna, dan interaksi pengguna untuk menciptakan produk digital yang fungsional sekaligus memukau. Di luar dunia desain, kecintaan saya pada seni menggambar dan tarik suara membentuk karakter saya yang ekspresif, detail, dan selalu terbuka untuk mengeksplorasi inovasi baru di industri kreatif.
+                </p>
+                <div class="about-highlights">
+                    <span class="about-tag">HTML & CSS</span>
+                    <span class="about-tag">JavaScript</span>
+                    <span class="about-tag">Figma & Canva</span>
+                    <span class="about-tag">Vocalist</span>
+                    <span class="about-tag">Digital Artist</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="reveal-on-scroll">
+            <h2 class="section-title">Keahlian & Kemampuan</h2>
+            <div class="grid-cards">
+                <div class="card hover-glow">
+                    <h3>Web Development & Programming</h3>
+                    <p>Menguasai HTML, CSS, JavaScript, dan p5.js untuk membangun aplikasi web interaktif serta sistem fungsional.</p>
+                </div>
+                <div class="card hover-glow">
+                    <h3>UI/UX & Digital Design</h3>
+                    <p>Berpengalaman merancang antarmuka, materi publikasi komersial, poster kompetisi, dan desain kreatif menggunakan Canva, Figma, serta Ibis Paint X.</p>
+                </div>
+                <div class="card hover-glow">
+                    <h3>Public Speaking & Media</h3>
+                    <p>Berpengalaman dalam pengelolaan komunikasi publik, media informasi organisasi, serta advokasi program sosial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="reveal-on-scroll">
+            <h2 class="section-title">Prestasi & Pengalaman</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Divisi Kominfo Duta</h3>
+                        <p class="role">Pengelola Media & Desainer Visual</p>
+                        <p>Bertanggung jawab dalam pengelolaan publikasi informasi, media sosial, serta pembuatan berbagai materi desain visual menggunakan Canva untuk program kerja Duta.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Brand Ambassador Duta Digital Indonesia</h3>
+                        <p class="role">Brand Ambassador</p>
+                        <p>Mengemban peran sebagai Brand Ambassador Duta Digital Indonesia untuk mengkampanyekan literasi digital dan inovasi teknologi.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Teaching Factory (TEFA) Sekolah</h3>
+                        <p class="role">UI/UX Designer</p>
+                        <p>Berperan sebagai UI/UX Designer dalam program Teaching Factory sekolah untuk merancang desain antarmuka aplikasi koperasi sekolah serta platform berbasis mobile.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Freelance Design</h3>
+                        <p class="role">Commercial Graphic Designer</p>
+                        <p>Menerima proyek berbayar untuk merancang Poster & Komis Art.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Duta Aksi Sosial</h3>
+                        <p class="role">Aktivis Sosial</p>
+                        <p>Terjun langsung ke masyarakat untuk menyuarakan isu sosial, menggalang kepedulian publik, serta menjalankan misi pengabdian.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Content Creator Academy</h3>
+                        <p class="role">Siswa Terbaik Tasikmalaya dari XL Smart</p>
+                        <p>Menerima apresiasi sebagai siswa terbaik asal Tasikmalaya dalam program pengembangan kreator konten digital.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Duta Generasi Remaja Indonesia</h3>
+                        <p class="role">Kandidat & Advokasi</p>
+                        <p>Menyusun materi dan advokasi mengenai peningkatan rasa percaya diri dan dukungan mental bagi kalangan remaja.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Duta Pelajar Rabbani</h3>
+                        <p class="role">Semi-Finalis Kompetisi Vokal di Bandung</p>
+                        <p>Mewakili pelajar dalam ajang kompetisi vokal regional dan berhasil menembus babak semi-final di Bandung.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Festival Seni Nasional</h3>
+                        <p class="role">Juara 1 Lomba Menyanyi</p>
+                        <p>Meraih Juara 1 dalam perlombaan vokal tingkat nasional melalui performa vokal yang optimal.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>SRC Agus</h3>
+                        <p class="role">Developer</p>
+                        <p>Mengembangkan sistem Point of Sale untuk mendukung operasional SRC Agus.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>GenZ Space Platform</h3>
+                        <p class="role">Inisiator Web Komunitas Sekolah</p>
+                        <p>Membangun platform web untuk siswa SMKN 4 Tasikmalaya yang dilengkapi fitur pelacak suasana hati serta pesan anonim berbasis Firebase.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Tyayabooth Custom Photo Booth</h3>
+                        <p class="role">Creator & Frontend Designer</p>
+                        <p>Merancang aplikasi web photo booth interaktif dengan integrasi kamera dan kustomisasi frame bertema khusus.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Seni Rupa & Sastra Kreatif</h3>
+                        <p class="role">Desainer Digital & Penulis Novel</p>
+                        <p>Aktif dalam kompetisi desain digital sejak lama serta memiliki karya tulis novel yang telah mendapatkan penghargaan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" class="achievements">
+        <div class="reveal-on-scroll">
+            <h2 class="section-title">Pengalaman Berharga & Sertifikat</h2>
+            <div class="grid-cards">
+                <div class="card achievement-card hover-glow" onclick="openCert('ppkn.jpeg', 'Medali Emas Olimpiade Nasional PPKN')">
+                    <h3>Medali Emas Olimpiade PPKN</h3>
+                    <p>Penghargaan atas pencapaian prestasi akademik tingkat nasional bidang PPKN.</p>
+                    <span class="view-cert-btn">Lihat Sertifikat &rarr;</span>
+                </div>
+                <div class="card achievement-card hover-glow" onclick="openCert('xlsmart.jpeg', 'Siswa Terbaik Content Creator Academy')">
+                    <h3>Siswa Terbaik Content Creator Academy</h3>
+                    <p>Sertifikat penghargaan resmi dari XL Smart sebagai kreator konten terbaik.</p>
+                    <span class="view-cert-btn">Lihat Sertifikat &rarr;</span>
+                </div>
+                <div class="card achievement-card hover-glow" onclick="openCert('design.jpeg', 'Kompetisi Design Digital')">
+                    <h3>Kompetisi Desain Digital</h3>
+                    <p>Penghargaan atas partisipasi dan prestasi dalam ajang kreasi desain visual.</p>
+                    <span class="view-cert-btn">Lihat Sertifikat &rarr;</span>
+                </div>
+                <div class="card achievement-card hover-glow" onclick="openCert('Dutaaksi.jpeg', 'Duta Aksi Sosial Terbaik')">
+                    <h3>Duta Aksi Sosial Terbaik</h3>
+                    <p>Apresiasi atas kontribusi nyata dalam kegiatan advokasi dan pengabdian masyarakat.</p>
+                    <span class="view-cert-btn">Lihat Sertifikat &rarr;</span>
+                </div>
+                <div class="card achievement-card hover-glow" onclick="openCert('novel.jpeg', 'Penulis Novel Terpilih')">
+                    <h3>Penulis Novel Terpilih</h3>
+                    <p>Penghargaan karya literasi dalam bidang penulisan novel kreatif.</p>
+                    <span class="view-cert-btn">Lihat Sertifikat &rarr;</span>
+                </div>
+                <div class="card achievement-card hover-glow" onclick="openCert('politik.jpeg', 'Sertifikat Sekolah Politik')">
+                    <h3>Sertifikat Sekolah Politik</h3>
+                    <p>Sertifikat keikutsertaan dan kelulusan dalam program Sekolah Politik.</p>
+                    <span class="view-cert-btn">Lihat Sertifikat &rarr;</span>
+                </div>
+                <div class="card achievement-card hover-glow" onclick="openCert('dutarabani.jpeg', 'Semi-Finalis Duta Pelajar Rabbani')">
+                    <h3>Semi-Finalis Duta Pelajar Rabbani</h3>
+                    <p>Sertifikat pencapaian sebagai semi-finalis dalam ajang kompetisi vokal Duta Pelajar Rabbani.</p>
+                    <span class="view-cert-btn">Lihat Sertifikat &rarr;</span>
+                </div>
+                <div class="card achievement-card hover-glow" onclick="openCert('dutagenerasi.jpeg', 'Sertifikat Duta Generasi Remaja Indonesia')">
+                    <h3>Duta Generasi Remaja Indonesia</h3>
+                    <p>Sertifikat partisipasi dan apresiasi dalam ajang tantangan Duta Generasi Remaja Indonesia.</p>
+                    <span class="view-cert-btn">Lihat Sertifikat &rarr;</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="reveal-on-scroll">
+            <h2 class="section-title">Portofolio Karya</h2>
+            <div class="grid-cards">
+                <div class="card project-card hover-glow">
+                    <img src="web space.png" alt="Web Space Gen Z" class="achievement-img">
+                    <h3>Space Gen Z</h3>
+                    <p>Platform web interaktif untuk pelajar dengan integrasi sistem database Firebase.</p>
+                </div>
+                <div class="card project-card hover-glow">
+                    <img src="kopras.png" alt="UI/UX Figma Koperasi Sekolah" class="achievement-img">
+                    <h3>UI/UX Koperasi Sekolah (Figma)</h3>
+                    <p>Perancangan desain antarmuka aplikasi mobile dan web untuk sistem koperasi sekolah.</p>
+                </div>
+                <div class="card project-card hover-glow" onclick="openCert('jne.jpeg', 'Kompetisi Desain JNE')" style="cursor: pointer;">
+                    <img src="jne.jpeg" alt="Kompetisi JNE" class="achievement-img">
+                    <h3>Kompetisi Desain JNE</h3>
+                    <p>Karya dan pencapaian desain kreatif dalam ajang kompetisi yang diselenggarakan oleh JNE.</p>
+                    <span class="view-cert-btn">Lihat Detail &rarr;</span>
+                </div>
+                <div class="card project-card hover-glow">
+                    <img src="src.png" alt="POS SRC Agus" class="achievement-img">
+                    <h3>POS SRC Agus</h3>
+                    <p>Sistem Point of Sale (POS) dan manajemen inventaris toko untuk mendukung operasional SRC Agus.</p>
+                </div>
+                <div class="card project-card hover-glow">
+                    <img src="fotoo.png" alt="Tyayabooth Photo Booth" class="achievement-img">
+                    <h3>Tyayabooth Custom Photo Booth</h3>
+                    <p>Aplikasi web photo booth interaktif dengan fitur kustomisasi frame dan tangkapan kamera langsung.</p>
+                </div>
+                <div class="card project-card hover-glow">
+                    <img src="game.png" alt="Game p5.js" class="achievement-img">
+                    <h3>Interactive Game (p5.js)</h3>
+                    <p>Pembuatan game interaktif berbasis web menggunakan pustaka p5.js JavaScript.</p>
+                </div>
+                <div class="card project-card hover-glow" onclick="openCert('kamenkes.jpeg', 'Poster Lomba Kesehatan Kemenkes')" style="cursor: pointer;">
+                    <img src="kamenkes.jpeg" alt="Lomba Poster Kemenkes" class="achievement-img">
+                    <h3>Poster Lomba Kesehatan Kemenkes (Canva)</h3>
+                    <p>Karya desain poster bertema kesehatan (Juara 3 Kelompok 3) dalam ajang perlombaan yang diadakan Kemenkes di sekolah.</p>
+                    <span class="view-cert-btn">Lihat Detail &rarr;</span>
+                </div>
+                <div class="card project-card hover-glow" onclick="openCert('futsal.jpeg', 'Desain Poster Futsal')" style="cursor: pointer;">
+                    <img src="futsal.jpeg" alt="Desain Canva Futsal" class="achievement-img">
+                    <h3>Desain Poster Futsal (Canva)</h3>
+                    <p>Pembuatan proyek poster komersial berbayar untuk publikasi dan kebutuhan sosial media turnamen futsal via Canva.</p>
+                    <span class="view-cert-btn">Lihat Detail &rarr;</span>
+                </div>
+                <div class="card project-card hover-glow" onclick="openCert('ibis.jpeg', 'Ilustrasi Digital Ibis Paint X')" style="cursor: pointer;">
+                    <img src="ibis.jpeg" alt="Ilustrasi Digital Ibis Paint X" class="achievement-img">
+                    <h3>Ilustrasi Digital (Ibis Paint X)</h3>
+                    <p>Karya seni dan ilustrasi digital kreatif yang dikerjakan menggunakan aplikasi Ibis Paint X.</p>
+                    <span class="view-cert-btn">Lihat Detail &rarr;</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="reveal-on-scroll">
+            <h2 class="section-title">Mari Bekerja Sama</h2>
+            <p class="contact-desc">Terbuka untuk peluang kolaborasi proyek digital, kegiatan sosial, maupun kesempatan profesional lainnya.</p>
+            <div class="contact-box" style="margin-top: 24px;">
+                <a href="mailto:triacahyani112@gmail.com" class="btn btn-primary">Kirim Email</a>
+                <a href="https://wa.me/628572669856" target="_blank" class="btn btn-secondary">WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-icons-footer">
+            <a href="https://www.instagram.com/tychyyn_?igsi=MXM2Y24zYTFnc2w0ZQ%3D%3D&utm_source=qr" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/triacahyani456" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/tria-cahyani-1072083a5?trk=contact-info" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p>&copy; 2026 Tria Cahyani &bull; Professional Portfolio.</p>
+    </footer>
+
+    <div id="certModal" class="modal" onclick="closeCert()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeCert()">&times;</span>
+            <h3 id="modalTitle">Judul Sertifikat</h3>
+            <img id="modalImg" src="" alt="Sertifikat">
+        </div>
+    </div>
+
+    <script>
+        function enterPortfolio() {
+            const splash = document.getElementById('splashScreen');
+            if (splash) {
+                splash.classList.add('slide-up');
+                setTimeout(() => {
+                    splash.style.display = 'none';
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 800);
+            }
+        }
+
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 40) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
